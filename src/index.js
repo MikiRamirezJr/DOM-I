@@ -39,6 +39,8 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+
+// images
 console.log('project wired!')
 
 const logoImg = document.querySelector('#logo-img')
@@ -50,3 +52,20 @@ ctaImg.src = siteContent.images['cta-img']
 const middleImg = document.querySelector('#middle-img')
 middleImg.src = siteContent.images['accent-img']
 
+// footer links
+const footerLink = document.querySelector('footer a')
+footerLink.textContent = siteContent.footer.copyright
+footerLink.classList.add('bold')
+
+// Contact
+const contact = document.querySelector('section.contact')
+contact.children[0].textContent = siteContent.contact['contact-h4']
+
+contact.children[1].textContent = siteContent.content['address']
+
+contact.children[2].textContent = siteContent.content['phone']
+
+contact.children[3].textContent = siteContent.content['email']
+
+// nav links
+const navLinks = document.querySelectorAll('nav a')
