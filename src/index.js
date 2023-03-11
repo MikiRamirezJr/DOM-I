@@ -73,7 +73,7 @@ contact.children[3].textContent = siteContent.contact['email']
 const topContent = document.querySelector('.top-content')
 topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
 topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
-topContent.children[1].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
 topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
 
 
@@ -83,19 +83,16 @@ const h4sBottom = bottomContent.querySelectorAll('h4')
 h4sBottom[0].textContent = siteContent['main-content']['services-h4']
 h4sBottom[1].textContent = siteContent['main-content']['product-h4']
 h4sBottom[2].textContent = siteContent['main-content']['vision-h4']
-// declare a variable and set it equal to the bottomContent.querySelectorAll('p')
 const psBottom = bottomContent.querySelectorAll('p')
-// set the textContent of the first p equal to the siteContent['main-content']['services-content']
-psBottom[0].textContent = siteContent['main-content]']['services-content']
-psBottom[1].textContent = siteContent['main-content]']['product-content']
-psBottom[2].textContent = siteContent['main-content]']['vision-content']
+psBottom[0].textContent = siteContent['main-content']['services-content']
+psBottom[1].textContent = siteContent['main-content']['product-content']
+psBottom[2].textContent = siteContent['main-content']['vision-content']
 
 
 // cta
 // sometimes you dont have to declare a variable and you can just set the textContent equal to the siteContent['cta']['h1']
 document.querySelector('.cta-text h1').textContent = siteContent.cta.h1
 document.querySelector('.cta-text button').textContent = siteContent.cta.button
-
 
 
 
@@ -106,3 +103,4 @@ navLinks.forEach((link, idx) => {
   link.textContent = navLinkTexts[idx]
   link.classList.add('italic')
 })
+
