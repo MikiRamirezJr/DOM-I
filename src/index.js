@@ -44,6 +44,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 console.log('project wired!')
 
 const logoImg = document.querySelector('#logo-img')
+// first you declare a variable and and then you set the variable equal to the document.querySelector('') and then you set the src equal to the siteContent.images['logo-img']
 logoImg.src = siteContent.images['logo-img']
 
 const ctaImg = document.querySelector('#cta-img')
@@ -61,11 +62,47 @@ footerLink.classList.add('bold')
 const contact = document.querySelector('section.contact')
 contact.children[0].textContent = siteContent.contact['contact-h4']
 
-contact.children[1].textContent = siteContent.content['address']
+contact.children[1].textContent = siteContent.contact['address']
 
-contact.children[2].textContent = siteContent.content['phone']
+contact.children[2].textContent = siteContent.contact['phone']
 
-contact.children[3].textContent = siteContent.content['email']
+contact.children[3].textContent = siteContent.contact['email']
+
+
+
+const topContent = document.querySelector('.top-content')
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topContent.children[1].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+
+// bottom content
+const bottomContent = document.querySelector('.bottom-content')
+const h4sBottom = bottomContent.querySelectorAll('h4')
+h4sBottom[0].textContent = siteContent['main-content']['services-h4']
+h4sBottom[1].textContent = siteContent['main-content']['product-h4']
+h4sBottom[2].textContent = siteContent['main-content']['vision-h4']
+// declare a variable and set it equal to the bottomContent.querySelectorAll('p')
+const psBottom = bottomContent.querySelectorAll('p')
+// set the textContent of the first p equal to the siteContent['main-content']['services-content']
+psBottom[0].textContent = siteContent['main-content]']['services-content']
+psBottom[1].textContent = siteContent['main-content]']['product-content']
+psBottom[2].textContent = siteContent['main-content]']['vision-content']
+
+
+// cta
+// sometimes you dont have to declare a variable and you can just set the textContent equal to the siteContent['cta']['h1']
+document.querySelector('.cta-text h1').textContent = siteContent.cta.h1
+document.querySelector('.cta-text button').textContent = siteContent.cta.button
+
+
+
 
 // nav links
-const navLinks = document.querySelectorAll('nav a')
+const navLinks = document.querySelectorAll('header nav a')
+const navLinkTexts = Object.values(siteContent.nav)
+navLinks.forEach((link, idx) => {
+  link.textContent = navLinkTexts[idx]
+  link.classList.add('italic')
+})
